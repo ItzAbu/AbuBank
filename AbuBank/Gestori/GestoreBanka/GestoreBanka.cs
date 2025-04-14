@@ -45,6 +45,11 @@ namespace AbuBank.Gestori.GestoreBanka
             return con.getSaldo(id);
         }
 
+        public List<Tuple<string, int, double, DateTime>> GetAllTransactions()
+        {
+            return con.GetAllTransactions();
+        }   
+
 
     }
 }

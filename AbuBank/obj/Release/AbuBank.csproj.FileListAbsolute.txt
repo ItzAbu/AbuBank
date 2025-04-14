@@ -1,0 +1,13 @@
+C:\Users\compu\source\repos\AbuBank\AbuBank\bin\Release\AbuBank.exe.config
+C:\Users\compu\source\repos\AbuBank\AbuBank\bin\Release\AbuBank.exe
+C:\Users\compu\source\repos\AbuBank\AbuBank\bin\Release\AbuBank.pdb
+C:\Users\compu\source\repos\AbuBank\AbuBank\bin\Release\Newtonsoft.Json.dll
+C:\Users\compu\source\repos\AbuBank\AbuBank\bin\Release\Newtonsoft.Json.xml
+C:\Users\compu\source\repos\AbuBank\AbuBank\obj\Release\AbuBank.csproj.AssemblyReference.cache
+C:\Users\compu\source\repos\AbuBank\AbuBank\obj\Release\AbuBank.Form1.resources
+C:\Users\compu\source\repos\AbuBank\AbuBank\obj\Release\AbuBank.Properties.Resources.resources
+C:\Users\compu\source\repos\AbuBank\AbuBank\obj\Release\AbuBank.csproj.GenerateResource.cache
+C:\Users\compu\source\repos\AbuBank\AbuBank\obj\Release\AbuBank.csproj.CoreCompileInputs.cache
+C:\Users\compu\source\repos\AbuBank\AbuBank\obj\Release\AbuBank.csproj.Up2Date
+C:\Users\compu\source\repos\AbuBank\AbuBank\obj\Release\AbuBank.exe
+C:\Users\compu\source\repos\AbuBank\AbuBank\obj\Release\AbuBank.pdb

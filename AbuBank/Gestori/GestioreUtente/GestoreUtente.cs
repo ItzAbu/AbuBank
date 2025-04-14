@@ -17,23 +17,24 @@ namespace AbuBank.Gestori.GestioreUtente
         public GestoreUtente()
         {
             //ciao
-            
+            //gf
+
         }
 
         public void start()
         {
-            
+
 
             string path = @"..\..\Dati\Utenti\";
             string[] directories = System.IO.Directory.GetDirectories(path);
             foreach (string directory in directories)
             {
-                
+
                 string[] files = System.IO.Directory.GetFiles(directory);
                 User temp = null;
                 Conto temp1 = null;
 
-                if(directory.EndsWith("utente0"))
+                if (directory.EndsWith("utente0"))
                 {
                     continue;
                 }
@@ -53,7 +54,7 @@ namespace AbuBank.Gestori.GestioreUtente
                 }
             }
 
-            foreach(var u in utenteConto)
+            foreach (var u in utenteConto)
             {
                 MessageBox.Show(u.Value.ID + " " + u.Key._nome);
             }
@@ -111,6 +112,18 @@ namespace AbuBank.Gestori.GestioreUtente
                 }
             }
             return 0;
+        }
+
+        public string getName(int ID)
+        {
+            foreach (var item in utenteConto)
+            {
+                if (item.Value.ID == ID)
+                {
+                    return item.Key._nome;
+                }
+            }
+            return null;
         }
     }
 }

@@ -1,0 +1,12 @@
+{
+  "Dati_Personali": {
+    "Nome": "Giovanni",
+    "Cognome": "Sebastiani",
+    "Data_di_Nascita": "26/07/2007",
+    "Indirizzo": "Via Flavia 40",
+    "Città": "Ancona",
+    "CAP": "60131",
+    "Telefono": "3519422342",
+    "Email": "gioviseb@gmail.com"
+  }
+}

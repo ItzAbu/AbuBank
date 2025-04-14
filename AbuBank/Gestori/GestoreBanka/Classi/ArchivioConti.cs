@@ -54,6 +54,28 @@ namespace AbuBank.Gestori.GestoreBanka.Classi
             File.WriteAllText(path, transazioni.ToString());
         }
 
+        public List<Tuple<string, int, double, DateTime>> GetAllTransactions()
+        {
+            string path = @"..\..\Dati\BankInfos\Conti\Transazioni.json";
+            string json = File.ReadAllText(path);
+            JObject transazioni = JObject.Parse(json);
+            List<Tuple<string, int, double, DateTime>> listaTransazioni = new List<Tuple<string, int, double, DateTime>>();
+
+            foreach (var tipo in transazioni)
+            {
+                foreach (var tr in tipo.Value.Children<JProperty>())
+                {
+                    string idAzione = (tipo.Key == "Entrata" ? "E" : "U") + tr.Name;
+                    int idUtente = (int)tr.Value["ID"];
+                    double importo = (double)tr.Value["Importo"];
+                    DateTime data = DateTime.ParseExact((string)tr.Value["Data"], "yyyy-MM-dd", null);
+                    listaTransazioni.Add(new Tuple<string, int, double, DateTime>(idAzione, idUtente, importo, data));
+                }
+            }
+
+            return listaTransazioni;
+        }
+
         public bool Deposita(int id, double importo)
         {
             if (archivio.ContainsKey(id))

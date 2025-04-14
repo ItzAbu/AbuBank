@@ -47,10 +47,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.gName = new System.Windows.Forms.TextBox();
             this.UserListG = new System.Windows.Forms.GroupBox();
-            this.Saldo = new System.Windows.Forms.ListBox();
-            this.Nome = new System.Windows.Forms.ListBox();
-            this.Id = new System.Windows.Forms.ListBox();
+            this.lUserList = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.AdminsButton = new System.Windows.Forms.RadioButton();
+            this.UsersButton = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.sType = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.sBorn = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -68,30 +74,36 @@
             this.sSurn = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.sName = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.sType = new System.Windows.Forms.ComboBox();
-            this.UsersButton = new System.Windows.Forms.RadioButton();
-            this.AdminsButton = new System.Windows.Forms.RadioButton();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.SingMov = new System.Windows.Forms.GroupBox();
-            this.Importo = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.Preleva = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.Importo = new System.Windows.Forms.TextBox();
             this.Transfer = new System.Windows.Forms.GroupBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.DaId = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.AId = new System.Windows.Forms.TextBox();
-            this.Transerisci = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.dAmount = new System.Windows.Forms.TextBox();
+            this.Transerisci = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
+            this.AId = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.DaId = new System.Windows.Forms.TextBox();
+            this.Transazioni = new System.Windows.Forms.GroupBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tUser = new System.Windows.Forms.RadioButton();
+            this.tAll = new System.Windows.Forms.RadioButton();
+            this.tTrans = new System.Windows.Forms.ListView();
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Admin.SuspendLayout();
             this.UserListG.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SingMov.SuspendLayout();
             this.Transfer.SuspendLayout();
+            this.Transazioni.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Admin
@@ -183,9 +195,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(137, 388);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 16);
+            this.label5.Size = new System.Drawing.Size(40, 20);
             this.label5.TabIndex = 9;
-            this.label5.Text = "CAp";
+            this.label5.Text = "Cap";
             // 
             // gCap
             // 
@@ -260,43 +272,81 @@
             // 
             // UserListG
             // 
+            this.UserListG.Controls.Add(this.lUserList);
             this.UserListG.Controls.Add(this.panel1);
-            this.UserListG.Controls.Add(this.Saldo);
-            this.UserListG.Controls.Add(this.Nome);
-            this.UserListG.Controls.Add(this.Id);
-            this.UserListG.Location = new System.Drawing.Point(1439, 12);
+            this.UserListG.Location = new System.Drawing.Point(1509, 12);
             this.UserListG.Name = "UserListG";
-            this.UserListG.Size = new System.Drawing.Size(369, 1050);
+            this.UserListG.Size = new System.Drawing.Size(369, 513);
             this.UserListG.TabIndex = 3;
             this.UserListG.TabStop = false;
             this.UserListG.Text = "UserList";
             // 
-            // Saldo
+            // lUserList
             // 
-            this.Saldo.FormattingEnabled = true;
-            this.Saldo.ItemHeight = 16;
-            this.Saldo.Location = new System.Drawing.Point(297, 54);
-            this.Saldo.Name = "Saldo";
-            this.Saldo.Size = new System.Drawing.Size(56, 980);
-            this.Saldo.TabIndex = 2;
+            this.lUserList.CheckBoxes = true;
+            this.lUserList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.lUserList.HideSelection = false;
+            this.lUserList.Location = new System.Drawing.Point(20, 62);
+            this.lUserList.Name = "lUserList";
+            this.lUserList.Scrollable = false;
+            this.lUserList.Size = new System.Drawing.Size(333, 436);
+            this.lUserList.Sorting = System.Windows.Forms.SortOrder.Ascending;
+            this.lUserList.TabIndex = 22;
+            this.lUserList.UseCompatibleStateImageBehavior = false;
+            this.lUserList.View = System.Windows.Forms.View.Details;
+            this.lUserList.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.lUserList_ItemCheck);
+            this.lUserList.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.lUserList_ItemChecked);
             // 
-            // Nome
+            // columnHeader1
             // 
-            this.Nome.FormattingEnabled = true;
-            this.Nome.ItemHeight = 16;
-            this.Nome.Location = new System.Drawing.Point(133, 53);
-            this.Nome.Name = "Nome";
-            this.Nome.Size = new System.Drawing.Size(158, 980);
-            this.Nome.TabIndex = 1;
+            this.columnHeader1.Text = "Id";
+            this.columnHeader1.Width = 80;
             // 
-            // Id
+            // columnHeader2
             // 
-            this.Id.FormattingEnabled = true;
-            this.Id.ItemHeight = 16;
-            this.Id.Location = new System.Drawing.Point(27, 54);
-            this.Id.Name = "Id";
-            this.Id.Size = new System.Drawing.Size(100, 980);
-            this.Id.TabIndex = 0;
+            this.columnHeader2.Text = "Nome";
+            this.columnHeader2.Width = 130;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Saldo";
+            this.columnHeader3.Width = 80;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.AdminsButton);
+            this.panel1.Controls.Add(this.UsersButton);
+            this.panel1.Location = new System.Drawing.Point(20, 21);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(333, 35);
+            this.panel1.TabIndex = 20;
+            // 
+            // AdminsButton
+            // 
+            this.AdminsButton.AutoSize = true;
+            this.AdminsButton.Location = new System.Drawing.Point(234, 7);
+            this.AdminsButton.Name = "AdminsButton";
+            this.AdminsButton.Size = new System.Drawing.Size(66, 20);
+            this.AdminsButton.TabIndex = 19;
+            this.AdminsButton.Text = "Admin";
+            this.AdminsButton.UseVisualStyleBackColor = true;
+            this.AdminsButton.CheckedChanged += new System.EventHandler(this.AdminsButton_CheckedChanged);
+            // 
+            // UsersButton
+            // 
+            this.UsersButton.AutoSize = true;
+            this.UsersButton.Checked = true;
+            this.UsersButton.Location = new System.Drawing.Point(41, 7);
+            this.UsersButton.Name = "UsersButton";
+            this.UsersButton.Size = new System.Drawing.Size(57, 20);
+            this.UsersButton.TabIndex = 18;
+            this.UsersButton.TabStop = true;
+            this.UsersButton.Text = "User";
+            this.UsersButton.UseVisualStyleBackColor = true;
+            this.UsersButton.CheckedChanged += new System.EventHandler(this.UsersButton_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -325,6 +375,27 @@
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Create New Staffer";
+            // 
+            // sType
+            // 
+            this.sType.FormattingEnabled = true;
+            this.sType.Items.AddRange(new object[] {
+            "Impiegato",
+            "Manager",
+            "Admin"});
+            this.sType.Location = new System.Drawing.Point(320, 187);
+            this.sType.Name = "sType";
+            this.sType.Size = new System.Drawing.Size(255, 24);
+            this.sType.TabIndex = 19;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(420, 170);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(39, 16);
+            this.label17.TabIndex = 18;
+            this.label17.Text = "Type";
             // 
             // sBorn
             // 
@@ -389,9 +460,9 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(137, 388);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(33, 16);
+            this.label12.Size = new System.Drawing.Size(40, 20);
             this.label12.TabIndex = 9;
-            this.label12.Text = "CAp";
+            this.label12.Text = "Cap";
             // 
             // sCap
             // 
@@ -464,60 +535,6 @@
             this.sName.Size = new System.Drawing.Size(255, 22);
             this.sName.TabIndex = 0;
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(420, 170);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(39, 16);
-            this.label17.TabIndex = 18;
-            this.label17.Text = "Type";
-            // 
-            // sType
-            // 
-            this.sType.FormattingEnabled = true;
-            this.sType.Items.AddRange(new object[] {
-            "Impiegato",
-            "Manager",
-            "Admin"});
-            this.sType.Location = new System.Drawing.Point(320, 187);
-            this.sType.Name = "sType";
-            this.sType.Size = new System.Drawing.Size(255, 24);
-            this.sType.TabIndex = 19;
-            // 
-            // UsersButton
-            // 
-            this.UsersButton.AutoSize = true;
-            this.UsersButton.Checked = true;
-            this.UsersButton.Location = new System.Drawing.Point(41, 7);
-            this.UsersButton.Name = "UsersButton";
-            this.UsersButton.Size = new System.Drawing.Size(57, 20);
-            this.UsersButton.TabIndex = 18;
-            this.UsersButton.TabStop = true;
-            this.UsersButton.Text = "User";
-            this.UsersButton.UseVisualStyleBackColor = true;
-            this.UsersButton.CheckedChanged += new System.EventHandler(this.UsersButton_CheckedChanged);
-            // 
-            // AdminsButton
-            // 
-            this.AdminsButton.AutoSize = true;
-            this.AdminsButton.Location = new System.Drawing.Point(234, 7);
-            this.AdminsButton.Name = "AdminsButton";
-            this.AdminsButton.Size = new System.Drawing.Size(66, 20);
-            this.AdminsButton.TabIndex = 19;
-            this.AdminsButton.Text = "Admin";
-            this.AdminsButton.UseVisualStyleBackColor = true;
-            this.AdminsButton.CheckedChanged += new System.EventHandler(this.AdminsButton_CheckedChanged);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.AdminsButton);
-            this.panel1.Controls.Add(this.UsersButton);
-            this.panel1.Location = new System.Drawing.Point(29, 21);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(324, 35);
-            this.panel1.TabIndex = 20;
-            // 
             // SingMov
             // 
             this.SingMov.Controls.Add(this.Preleva);
@@ -531,21 +548,15 @@
             this.SingMov.TabStop = false;
             this.SingMov.Text = "Deposita/Preleva";
             // 
-            // Importo
+            // Preleva
             // 
-            this.Importo.Location = new System.Drawing.Point(0, 58);
-            this.Importo.Name = "Importo";
-            this.Importo.Size = new System.Drawing.Size(264, 22);
-            this.Importo.TabIndex = 0;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(107, 39);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(52, 16);
-            this.label18.TabIndex = 1;
-            this.label18.Text = "Amount";
+            this.Preleva.Location = new System.Drawing.Point(6, 170);
+            this.Preleva.Name = "Preleva";
+            this.Preleva.Size = new System.Drawing.Size(258, 61);
+            this.Preleva.TabIndex = 3;
+            this.Preleva.Text = "Preleva";
+            this.Preleva.UseVisualStyleBackColor = true;
+            this.Preleva.Click += new System.EventHandler(this.Preleva_Click);
             // 
             // button3
             // 
@@ -557,15 +568,21 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // Preleva
+            // label18
             // 
-            this.Preleva.Location = new System.Drawing.Point(6, 170);
-            this.Preleva.Name = "Preleva";
-            this.Preleva.Size = new System.Drawing.Size(258, 61);
-            this.Preleva.TabIndex = 3;
-            this.Preleva.Text = "Preleva";
-            this.Preleva.UseVisualStyleBackColor = true;
-            this.Preleva.Click += new System.EventHandler(this.Preleva_Click);
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(107, 39);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(52, 16);
+            this.label18.TabIndex = 1;
+            this.label18.Text = "Amount";
+            // 
+            // Importo
+            // 
+            this.Importo.Location = new System.Drawing.Point(0, 58);
+            this.Importo.Name = "Importo";
+            this.Importo.Size = new System.Drawing.Size(264, 22);
+            this.Importo.TabIndex = 0;
             // 
             // Transfer
             // 
@@ -576,54 +593,12 @@
             this.Transfer.Controls.Add(this.AId);
             this.Transfer.Controls.Add(this.label19);
             this.Transfer.Controls.Add(this.DaId);
-            this.Transfer.Location = new System.Drawing.Point(328, 492);
+            this.Transfer.Location = new System.Drawing.Point(300, 492);
             this.Transfer.Name = "Transfer";
-            this.Transfer.Size = new System.Drawing.Size(268, 242);
+            this.Transfer.Size = new System.Drawing.Size(273, 242);
             this.Transfer.TabIndex = 19;
             this.Transfer.TabStop = false;
             this.Transfer.Text = "Trasferisci";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(44, 39);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(49, 16);
-            this.label19.TabIndex = 5;
-            this.label19.Text = "Da (ID)";
-            // 
-            // DaId
-            // 
-            this.DaId.Location = new System.Drawing.Point(22, 58);
-            this.DaId.Name = "DaId";
-            this.DaId.Size = new System.Drawing.Size(84, 22);
-            this.DaId.TabIndex = 4;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(192, 39);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(40, 16);
-            this.label20.TabIndex = 7;
-            this.label20.Text = "A (ID)";
-            // 
-            // AId
-            // 
-            this.AId.Location = new System.Drawing.Point(168, 58);
-            this.AId.Name = "AId";
-            this.AId.Size = new System.Drawing.Size(85, 22);
-            this.AId.TabIndex = 6;
-            // 
-            // Transerisci
-            // 
-            this.Transerisci.Location = new System.Drawing.Point(6, 170);
-            this.Transerisci.Name = "Transerisci";
-            this.Transerisci.Size = new System.Drawing.Size(258, 61);
-            this.Transerisci.TabIndex = 4;
-            this.Transerisci.Text = "Trasferisci";
-            this.Transerisci.UseVisualStyleBackColor = true;
-            this.Transerisci.Click += new System.EventHandler(this.Transerisci_Click);
             // 
             // label21
             // 
@@ -641,11 +616,131 @@
             this.dAmount.Size = new System.Drawing.Size(255, 22);
             this.dAmount.TabIndex = 4;
             // 
+            // Transerisci
+            // 
+            this.Transerisci.Location = new System.Drawing.Point(6, 170);
+            this.Transerisci.Name = "Transerisci";
+            this.Transerisci.Size = new System.Drawing.Size(258, 61);
+            this.Transerisci.TabIndex = 4;
+            this.Transerisci.Text = "Trasferisci";
+            this.Transerisci.UseVisualStyleBackColor = true;
+            this.Transerisci.Click += new System.EventHandler(this.Transerisci_Click);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(192, 39);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(40, 16);
+            this.label20.TabIndex = 7;
+            this.label20.Text = "A (ID)";
+            // 
+            // AId
+            // 
+            this.AId.Location = new System.Drawing.Point(168, 58);
+            this.AId.Name = "AId";
+            this.AId.Size = new System.Drawing.Size(85, 22);
+            this.AId.TabIndex = 6;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(44, 39);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(49, 16);
+            this.label19.TabIndex = 5;
+            this.label19.Text = "Da (ID)";
+            // 
+            // DaId
+            // 
+            this.DaId.Location = new System.Drawing.Point(22, 58);
+            this.DaId.Name = "DaId";
+            this.DaId.Size = new System.Drawing.Size(84, 22);
+            this.DaId.TabIndex = 4;
+            // 
+            // Transazioni
+            // 
+            this.Transazioni.Controls.Add(this.tTrans);
+            this.Transazioni.Controls.Add(this.panel2);
+            this.Transazioni.Location = new System.Drawing.Point(1478, 531);
+            this.Transazioni.Name = "Transazioni";
+            this.Transazioni.Size = new System.Drawing.Size(400, 512);
+            this.Transazioni.TabIndex = 21;
+            this.Transazioni.TabStop = false;
+            this.Transazioni.Text = "Transazioni";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.tUser);
+            this.panel2.Controls.Add(this.tAll);
+            this.panel2.Location = new System.Drawing.Point(26, 21);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(365, 35);
+            this.panel2.TabIndex = 20;
+            // 
+            // tUser
+            // 
+            this.tUser.AutoSize = true;
+            this.tUser.Location = new System.Drawing.Point(226, 7);
+            this.tUser.Name = "tUser";
+            this.tUser.Size = new System.Drawing.Size(57, 20);
+            this.tUser.TabIndex = 19;
+            this.tUser.Text = "User";
+            this.tUser.UseVisualStyleBackColor = true;
+            // 
+            // tAll
+            // 
+            this.tAll.AutoSize = true;
+            this.tAll.Checked = true;
+            this.tAll.Location = new System.Drawing.Point(50, 7);
+            this.tAll.Name = "tAll";
+            this.tAll.Size = new System.Drawing.Size(43, 20);
+            this.tAll.TabIndex = 18;
+            this.tAll.TabStop = true;
+            this.tAll.Text = "All";
+            this.tAll.UseVisualStyleBackColor = true;
+            this.tAll.CheckedChanged += new System.EventHandler(this.tAll_CheckedChanged);
+            // 
+            // tTrans
+            // 
+            this.tTrans.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7});
+            this.tTrans.HideSelection = false;
+            this.tTrans.Location = new System.Drawing.Point(26, 62);
+            this.tTrans.Name = "tTrans";
+            this.tTrans.Size = new System.Drawing.Size(368, 444);
+            this.tTrans.TabIndex = 23;
+            this.tTrans.UseCompatibleStateImageBehavior = false;
+            this.tTrans.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Id";
+            this.columnHeader4.Width = 80;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "UserId";
+            this.columnHeader5.Width = 130;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Saldo";
+            this.columnHeader6.Width = 80;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Data";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1820, 1055);
+            this.ClientSize = new System.Drawing.Size(1890, 1055);
+            this.Controls.Add(this.Transazioni);
             this.Controls.Add(this.Transfer);
             this.Controls.Add(this.SingMov);
             this.Controls.Add(this.groupBox1);
@@ -656,14 +751,17 @@
             this.Admin.ResumeLayout(false);
             this.Admin.PerformLayout();
             this.UserListG.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.SingMov.ResumeLayout(false);
             this.SingMov.PerformLayout();
             this.Transfer.ResumeLayout(false);
             this.Transfer.PerformLayout();
+            this.Transazioni.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -671,9 +769,6 @@
         #endregion
         private System.Windows.Forms.GroupBox Admin;
         private System.Windows.Forms.GroupBox UserListG;
-        private System.Windows.Forms.ListBox Saldo;
-        private System.Windows.Forms.ListBox Nome;
-        private System.Windows.Forms.ListBox Id;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox gCap;
         private System.Windows.Forms.Label label4;
@@ -727,6 +822,19 @@
         private System.Windows.Forms.Button Transerisci;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox dAmount;
+        private System.Windows.Forms.GroupBox Transazioni;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.RadioButton tUser;
+        private System.Windows.Forms.RadioButton tAll;
+        private System.Windows.Forms.ListView lUserList;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ListView tTrans;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
     }
 }
 
