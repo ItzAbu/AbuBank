@@ -17,6 +17,7 @@ namespace AbuBank.Gestori.GestioreUtente
         public GestoreUtente()
         {
             //ciao
+            //gf
             
         }
 
