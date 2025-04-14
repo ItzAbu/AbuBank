@@ -1,0 +1,12 @@
+{
+    "Dati_Personali": {
+        "Nome": "Mario",
+        "Cognome": "Rossi",
+        "Data_di_Nascita": "01/01/1980",
+        "Indirizzo": "Via Roma, 1",
+        "Città": "Milano",
+        "CAP": "20100",
+        "Telefono": "+39 02 1234567",
+        "Email": "mario.rossi@example.com"
+    }
+}

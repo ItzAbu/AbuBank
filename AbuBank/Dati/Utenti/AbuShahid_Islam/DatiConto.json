@@ -1,0 +1,10 @@
+{
+  "Conto": {
+    "ID": 1,
+    "Nome": "Abu Shahid",
+    "Codice": "1537 6627 5049 0956",
+    "CVC": "404",
+    "Scadenza": "04/29",
+    "Pin": "1896"
+  }
+}
