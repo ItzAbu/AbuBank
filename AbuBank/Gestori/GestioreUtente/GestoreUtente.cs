@@ -13,12 +13,10 @@ namespace AbuBank.Gestori.GestioreUtente
     {
         private Dictionary<User, Conto> utenteConto = new Dictionary<User, Conto>();
 
+        //New Commit
 
         public GestoreUtente()
         {
-            //ciao
-            //gf
-
         }
 
         public void start()
